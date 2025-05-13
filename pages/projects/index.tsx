@@ -10,10 +10,12 @@ import colors from '../../content/projects/_colors.json'
 import content from '../../content/projects/featured.json'
 
 //
-export default function Portfolio({ user, repos }) {
+export default function Projects({ user, repos }) {
     return (
         <>
-<h1>hello</h1>
+        <Color colors={colors} />
+        <FeaturedProjects />
+        <GitRecentProjects user={user} repos={repos} />
         </>
     )
 }

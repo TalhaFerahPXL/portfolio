@@ -8,7 +8,35 @@ import settings from '../../content/_settings.json'
 import content  from '../../content/navbar.json'
 import css from '../../styles/structure/navbar.module.scss'
 
+import { Typewriter } from 'react-simple-typewriter'
+
 export default function Navbar() {
+
+
+
+	const [matrixText, setMatrixText] = useState(false)
+
+	useEffect(() => {
+		const alreadySeen = sessionStorage.getItem('mt');
+	
+		if (alreadySeen !== 'true') {
+			const delay = Math.floor(Math.random() * 7000) + 10000; // 10-17 sec
+			const showTimeout = setTimeout(() => {
+				setMatrixText(true);
+	
+				const hideTimeout = setTimeout(() => {
+					setMatrixText(false);
+					sessionStorage.setItem('mt', 'true');
+				}, 7000);
+	
+				// 👇️ Belangrijk: bewaar beide timeouts om ze later op te ruimen
+				return () => clearTimeout(hideTimeout);
+			}, delay);
+	
+			// 👇️ Dit wordt *onmiddellijk* geretourneerd door useEffect
+			return () => clearTimeout(showTimeout);
+		}
+	}, []);
 
 	const router = useRouter()
 
@@ -134,9 +162,24 @@ export default function Navbar() {
 		<nav id="Navbar" className={css.container}>
 			<ul className={css.menu}>
 				<li className={css.menuHeader}>
-					<Link className={css.logo} href="/"  >
-						{settings.name}
-					</Link>
+
+				{!matrixText ? (
+  <Link className={css.logo} href="/">
+    {settings.name}
+  </Link>
+) : (
+  <p className="justify-center items-center flex text-green-400 font-mono">
+    <Typewriter
+      words={['The Matrix has you...']}
+      loop={1}
+      cursor
+      cursorStyle="|"
+      typeSpeed={40}
+      deleteSpeed={20}
+      delaySpeed={1200}
+    />
+  </p>
+)}
 					<button onClick={toggleMenu} className={css.mobileToggle} data-open={menuState}>
 						<div>
 							<span></span>

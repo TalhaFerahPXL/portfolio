@@ -9,8 +9,48 @@ import Color 		from '../components/utils/page.colors.util'
 
 import colors 		from '../content/index/_colors.json'
 
+import { TechStack } from '../components/blocks/techstack'
+
+import MatrixIntro from '../components/sections/matrix.tsx'
+
+import { useEffect, useState } from "react";
+
+
+
+
 //
 export default function HomePage() {
+
+	const [showMatrix, setShowMatrix] = useState(false);
+
+	useEffect(() => {
+	  const alreadySeen = sessionStorage.getItem('ms');
+  
+	  if (alreadySeen !== 'true') {
+		const delay = Math.floor(Math.random() * 2000) + 10000; // 10-17 seconden
+  
+		const showTimeout = setTimeout(() => {
+		  setShowMatrix(true);
+		  document.body.style.overflow = 'hidden';
+  
+		  const hideTimeout = setTimeout(() => {
+			setShowMatrix(false);
+			document.body.style.overflow = 'auto';
+  
+			// mark as seen in sessionStorage
+			sessionStorage.setItem('ms', 'true');
+		  }, 3000); // matrix visible for 3 seconds
+  
+		  // Cleanup hide timeout
+		  return () => clearTimeout(hideTimeout);
+		}, delay);
+  
+		// Cleanup show timeout
+		return () => clearTimeout(showTimeout);
+	  }
+	}, []);
+
+
 
 	return (
 		<>
@@ -18,9 +58,12 @@ export default function HomePage() {
 			<Hero />
 			{/* <Looking /> */}
 			<FeaturedProjects />
-			<About />
-			<Technical />
+			{/* <About /> */}
+			{/* <Technical /> */}
 			{/* <Career /> */}
+			<TechStack/>
+			      {showMatrix && <MatrixIntro />}
+
 		</>
 	);
 }

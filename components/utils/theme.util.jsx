@@ -34,7 +34,7 @@ export default function SetTheme() {
 
 	const defaultTheme = () => {
 		const themeLocalStorage = localStorage.getItem('theme')
-		const themeSystem       = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+		const themeSystem       = window.matchMedia('(prefers-color-scheme: light)').matches ? 'dark' : 'light'
 
 		return ( themeLocalStorage ?? themeSystem )
 	}
@@ -48,7 +48,7 @@ export default function SetTheme() {
 		
 		const useSetTheme = (e) => { setTheme( e.matches ? 'dark' : 'light' ) }
 
-		const watchSysTheme = window.matchMedia('(prefers-color-scheme: dark)')
+		const watchSysTheme = window.matchMedia('(prefers-color-scheme: light)')
 
 		watchSysTheme.addEventListener( 'change', useSetTheme )
 
@@ -105,7 +105,7 @@ export default function SetTheme() {
 			<Script id="theme.util.jsx" strategy="beforeInteractive" >
 				{`
 				let themeLocalStorage = localStorage.getItem('theme')
-				let themeSystem       = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+				let themeSystem       = window.matchMedia('(prefers-color-scheme: light)').matches ? 'dark' : 'light'
 				document.querySelector(':root').dataset.theme = themeLocalStorage ?? themeSystem
 				`}
 			</Script>

@@ -16,6 +16,9 @@ import CopyBlock from '../../blocks/about.copy.block'
 // Section scss
 import about from '../../../styles/sections/index/about.module.scss'
 
+
+
+
 /**
  * Section: Technical
  * Highlight your technical skills with a short blurb about you,
@@ -24,8 +27,18 @@ import about from '../../../styles/sections/index/about.module.scss'
  * @returns {jsx} <Technical />
  */
 export default function Technical() {
+
+
+
+
+
+
+
+
 	return (
+		
 		<Section classProp={`${about.section} borderBottom`}>	
+
 			<Container spacing={['verticalXXXLrg']}>
 				<SectionTitle
 					title="Technical"
@@ -68,6 +81,8 @@ export default function Technical() {
 				</section>	
 			</Container>
 			{/* <SectionGridBg gridSize={4}/> */}
+         
+
 		</Section>
 	)
 }

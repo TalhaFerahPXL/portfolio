@@ -1,6 +1,6 @@
 // Sections
 import GitRecentProjects from '../../components/sections/projects/recent'
-import FeaturedProjects from '../../components/sections/projects/featured'
+import AllProjects from '../../components/sections/projects/allProjects'
 
 import Color  from '../../components/utils/page.colors.util'
 
@@ -10,10 +10,16 @@ import colors from '../../content/projects/_colors.json'
 import content from '../../content/projects/featured.json'
 
 //
-export default function Portfolio({ user, repos }) {
+export default function Projects() {
     return (
         <>
-<h1>hello</h1>
+        <Color colors={colors} />
+        <AllProjects />
+        
+
+
+
+
         </>
     )
 }

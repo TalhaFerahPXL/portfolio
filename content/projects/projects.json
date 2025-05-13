@@ -1,0 +1,140 @@
+[
+	{
+		"project": "ASP.NET Web API - Epos vzw",
+		"url": "",
+		"repo": "Private",
+		"descriptionTitle": "A .NET Web API",
+		"description": "that processes Excel files, fills data into PDF templates, and bundles all documents into a ZIP file. Deployed via AWS Lambda.",
+		"imageOptions": [ {"device": ""}
+		],
+		"images": [
+			{ "key": "mock-stack",	"hover": "right", 	"h": "1200", "w": "556", "url": "/img/logos/Europass.png" }
+
+		],
+		"stack": [
+			{ "key": "dotnetcore", 		"name": ".net", 			"type": "devicon" },
+			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
+			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
+			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
+			{ "key": "amazonwebservices",		"name": "aws", 		"type": "devicon" },
+			{ "key": "csharp",		"name": "c#", 		"type": "devicon" } ,
+			{ "key": "postman",		"name": "postman", 		"type": "devicon" } 
+		]
+	},
+	{
+		"project": "Shopify all in one image suite",
+		"url": "",
+		"repo": "Private",
+		"descriptionTitle": "Shopify Image Suite App",
+		"description": "for bulk image resizing, background removal, watermarking, and image compression with credit-based billing.",
+		"imageOptions": [
+			{ "key": "size", 	"device": "laptop",	"value": "large" }
+		],
+		"images": [
+			{ "key": "portfolio", "hover": "left", "h": "797", "w": "556",  "url": "/img/projects/shopifyImg.png" }
+		],
+		"stack": [
+			{ "key": "", 		"name": "Remix.js", 		"type": "devicon" },
+			{ "key": "react", 		"name": "React", 		"type": "devicon" },
+			{ "key": "nodejs", 		"name": "Node.js", 		"type": "devicon" },
+			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
+			{ "key": "typescript",		"name": "typescript", 		"type": "devicon" },
+			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
+			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
+			{ "key": "graphql",		"name": "graphql", 		"type": "devicon" },
+			{ "key": "shopify",		"name": "shopify", 		"type": "devicon" },
+			{ "key": "figma",		"name": "figma", 		"type": "devicon" }
+		]
+	},
+    {
+		"project": "Clothing Size Recommender",
+		"url": "",
+		"repo": "Private",
+		"descriptionTitle": "Size Recommendation App",
+		"description": "helps users find their ideal clothing size based on body measurements and preferences, improving fit accuracy and reducing returns.",
+		"imageOptions": [
+			{ "key": "size", "device": "mobile",	"value": "large" }
+		],
+		"images": [
+			{ "key": "portfolio", "hover": "left", "h": "797", "w": "556",  "url": "/img/projects/sizerec.png" }
+		],
+		"stack": [
+			{ "key": "", 		"name": "Remix.js", 		"type": "devicon" },
+			{ "key": "react", 		"name": "React", 		"type": "devicon" },
+			{ "key": "nodejs", 		"name": "Node.js", 		"type": "devicon" },
+			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
+			{ "key": "typescript",		"name": "typescript", 		"type": "devicon" },
+			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
+			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
+			{ "key": "graphql",		"name": "graphql", 		"type": "devicon" },
+			{ "key": "framermotion",		"name": "framermotion", 		"type": "devicon" },
+            { "key": "",		"name": "shopify Liquid", 		"type": "devicon" }
+		]
+	},
+    {
+		"project": "Headshot generator",
+		"url": "",
+		"repo": "Private",
+		"descriptionTitle": "AI Headshot Generator Tool",
+		"description": "generates professional AI-powered headshots from user-uploaded images, with a secure authentication flow and user-friendly interface.",
+		"imageOptions": [
+			{ "key": "size", "device": "mobile",	"value": "large" }
+		],
+		"images": [
+			{ "key": "portfolio", "hover": "left", "h": "797", "w": "556",  "url": "/img/projects/headshots.png" }
+		],
+		"stack": [
+			{ "key": "jetbrains", 		"name": "jetbrains", 		"type": "devicon" },
+			{ "key": "nodejs", 		"name": "Node.js", 		"type": "devicon" },
+			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
+			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
+			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
+			{ "key": "dotnetcore",		"name": "dotnetcore", 		"type": "devicon" },
+            { "key": "oauth",		"name": "oauth", 		"type": "devicon" }, 
+             { "key": "json",		"name": "json", 		"type": "devicon" }
+
+		]
+	},
+    {
+		"project": "Dashboard UI",
+"url": "",
+"repo": "Public",
+"descriptionTitle": "Custom Dashboard with Dark & Light Mode",
+"description": "Admin dashboard built from scratch with toggleable dark and light modes, focusing on clean design and user experience.",
+		"imageOptions": [
+			{ "key": "size", "device": "laptop",	"value": "large" }
+		],
+		"images": [
+			{ "key": "portfolio", "hover": "left", "h": "797", "w": "556",  "url": "/img/projects/dash.png" }
+		],
+		"stack": [
+			{ "key": "jetbrains", 		"name": "jetbrains", 		"type": "devicon" },
+			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
+			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
+			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" }
+		]
+	},
+        {
+		"project": "Fullstack Auth System",
+"url": "",
+"repo": "Public",
+"descriptionTitle": "Secure Login & Registration System",
+"description": "A fullstack authentication flow with email verification, JWT-based login, hashed passwords, and a protected user dashboard.",
+		"imageOptions": [
+			{ "key": "size", "device": "laptop",	"value": "large" }
+		],
+		"images": [
+			{ "key": "portfolio", "hover": "left", "h": "797", "w": "556",  "url": "/img/projects/login.png" }
+		],
+		"stack": [
+			{ "key": "jetbrains", 		"name": "jetbrains", 		"type": "devicon" },
+			{ "key": "nodejs", 		"name": "Node.js", 		"type": "devicon" },
+			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
+			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
+			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
+			{ "key": "dotnetcore",		"name": "dotnetcore", 		"type": "devicon" },
+			{ "key": "microsoftsqlserver",		"name": "microsoftsqlserver", 		"type": "devicon" }
+
+		]
+	}
+]

@@ -9,6 +9,7 @@ import Icon from '../utils/icon.util.jsx'
 * scss reference for utils should probably be pulled in from the first component under the section
 */
 import badges from '../../styles/blocks/badges.module.scss';
+import { once } from 'events';
 
 
 export default function Badges({ list, block, color, fullContainer }) {
@@ -16,7 +17,7 @@ export default function Badges({ list, block, color, fullContainer }) {
 	const controls = useAnimation();
 	const { ref, inView  } = useInView({
 		"threshold": 0.5,
-		"triggerOnce": false
+		"triggerOnce": true
 	})
 
 	useEffect( () => {
@@ -61,6 +62,8 @@ export default function Badges({ list, block, color, fullContainer }) {
 				initial="hidden"
 				animate={controls}
 				whileHover="hover"
+				 viewport={{ once: true }}
+				 style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}
 		>
 		{
 		list.map( ({ key, name, type }) => {
@@ -69,7 +72,9 @@ export default function Badges({ list, block, color, fullContainer }) {
 					key={name} 
 					className={`${badges.item} ${key}`}
 					//Animations
-					variants={item} >
+					variants={item} 
+					 viewport={{ once: true }}
+					>
 					<IconModule iconKey={key} iconType={type} color={color}/>
 					<span className={badges.title}>{name}</span>
 				</m.li> 
