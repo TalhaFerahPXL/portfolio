@@ -62,9 +62,36 @@ export default function FeaturedProject({ content }, index) {
 			</div>
 
 			{imageOptions[0].device === 'laptop' 
-			? laptop(images[0].url) 
+			? 
+			<motion.div
+			ref={ref}
+			initial="hidden"
+			animate={controls}
+			variants={{
+				hidden: { opacity: 0, y: 50 },
+				visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+			}}
+			style={{ width: '100%', justifyContent: 'center', display: 'flex', alignItems: 'center', flexDirection: 'column'}}
+			>
+			{laptop(images[0].url)}
+			</motion.div>
 			
-			: imageOptions[0].device === 'mobile' ? mobile(images[0].url)
+		
+			
+			: imageOptions[0].device === 'mobile' ? 
+
+			<motion.div
+			ref={ref}
+			initial="hidden"
+			animate={controls}
+			variants={{
+				hidden: { opacity: 0, y: 50 },
+				visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+			}}
+			style={{ width: '100%', justifyContent: 'center', display: 'flex', alignItems: 'center', flexDirection: 'column'}}
+			>
+			{mobile(images[0].url)}
+			</motion.div>
 			
 		:
 		
@@ -169,15 +196,13 @@ const hoverRight = {
 
 
 function laptop(url){
+ 
 
+	
 	return(
-<motion.div
-  initial={{ opacity: 0, y: 50 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
-  style={{ width: '100%', justifyContent: 'center', display: 'flex', alignItems: 'center', flexDirection: 'column'}}
->
 
+
+<>
 <div class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[6px] rounded-t-xl h-[160px] max-w-[280px] md:h-[205px] md:max-w-[360px]">
   <div class="rounded-lg overflow-hidden h-[148px] md:h-[190px] bg-white dark:bg-gray-800">
     <img src={url} class="hidden dark:block h-[148px] md:h-[190px] w-full rounded-lg" alt=""/>
@@ -187,11 +212,11 @@ function laptop(url){
 <div class="relative mx-auto w-200 bg-gray-900 dark:bg-gray-700 rounded-b-xl rounded-t-sm h-[16px] max-w-[300px] md:h-[15px] md:max-w-[410px]">
   <div class="absolute left-1/2 top-0 -translate-x-1/2 rounded-b-xl w-[50px] h-[5px] md:w-[70px] md:h-[6px] bg-gray-800"></div>
 </div>
+</>
 
 
 
 
-</motion.div>
 	)
 }
 
@@ -202,15 +227,7 @@ function mobile(url){
 
 
 
-
-
-<motion.div
-  initial={{ opacity: 0, y: 50 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
-  style={{ width: '100%', justifyContent: 'center', display: 'flex', alignItems: 'center', flexDirection: 'column' }}
->
-
+<>
 <div class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[9px] rounded-[1.5rem] h-[375px] w-[188px] shadow-xl">
   
     <div class="w-[92px] h-[11px] bg-gray-800 top-0 rounded-b-[0.625rem] left-1/2 -translate-x-1/2 absolute"></div>
@@ -228,7 +245,7 @@ function mobile(url){
     </div>
 </div>
 
-</motion.div>
+</>
 	)
 
 }

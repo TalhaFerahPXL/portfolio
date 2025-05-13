@@ -34,7 +34,7 @@ export default function SetTheme() {
 
 	const defaultTheme = () => {
 		const themeLocalStorage = localStorage.getItem('theme')
-		const themeSystem       = window.matchMedia('(prefers-color-scheme: light)').matches ? 'dark' : 'light'
+		const themeSystem       = 'dark'
 
 		return ( themeLocalStorage ?? themeSystem )
 	}
@@ -105,7 +105,7 @@ export default function SetTheme() {
 			<Script id="theme.util.jsx" strategy="beforeInteractive" >
 				{`
 				let themeLocalStorage = localStorage.getItem('theme')
-				let themeSystem       = window.matchMedia('(prefers-color-scheme: light)').matches ? 'dark' : 'light'
+				let themeSystem       = 'dark'
 				document.querySelector(':root').dataset.theme = themeLocalStorage ?? themeSystem
 				`}
 			</Script>

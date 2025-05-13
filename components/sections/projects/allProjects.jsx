@@ -15,7 +15,7 @@ export default function AllProjects() {
 
     return (
         <Section classProp={css.hasBg}>	
-            <Container spacing={'verticalLrg'}>
+            <Container spacing={'verticalXLrg'}>
                 <SectionTitle
                     title="Projects"
                     preTitle=""

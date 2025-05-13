@@ -25,8 +25,8 @@
 		"project": "Shopify all in one image suite",
 		"url": "",
 		"repo": "Private",
-		"descriptionTitle": "An open source portfolio",
-		"description": "built on Next.js and React. A fast and agile MERN stack single page application.",
+		"descriptionTitle": "Shopify Image Suite App",
+		"description": "for bulk image resizing, background removal, watermarking, and image compression with credit-based billing.",
 		"imageOptions": [
 			{ "key": "size", 	"device": "laptop",	"value": "large" }
 		],
@@ -43,8 +43,7 @@
 			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
 			{ "key": "graphql",		"name": "graphql", 		"type": "devicon" },
 			{ "key": "shopify",		"name": "shopify", 		"type": "devicon" },
-			{ "key": "figma",		"name": "figma", 		"type": "devicon" },
-			{ "key": "framermotion",		"name": "framermotion", 		"type": "devicon" }
+			{ "key": "figma",		"name": "figma", 		"type": "devicon" }
 		]
 	}
 ]

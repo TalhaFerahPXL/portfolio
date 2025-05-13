@@ -67,6 +67,8 @@ export default function Hero() {
 					<button	className={`button ${button.primary}`}
 							onClick={ () => window.location = 'mailto:61talha.ferah@gmail.com' } >
 						{content.buttons.primary.title}
+						
+
 					</button>
 					<button className={`button ${button.secondary} leaveSite`}
 							onClick={ ()=> window.open("https://www.linkedin.com/in/talha-ferah-95b300253/", "_blank") } >

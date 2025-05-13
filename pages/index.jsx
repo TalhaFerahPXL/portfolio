@@ -18,9 +18,9 @@ import { useEffect, useState } from "react";
 
 
 
-//
 export default function HomePage() {
 
+	/*
 	const [showMatrix, setShowMatrix] = useState(false);
 
 	useEffect(() => {
@@ -48,7 +48,8 @@ export default function HomePage() {
 		// Cleanup show timeout
 		return () => clearTimeout(showTimeout);
 	  }
-	}, []);
+	}, []);    
+	*/
 
 
 
@@ -62,7 +63,8 @@ export default function HomePage() {
 			{/* <Technical /> */}
 			{/* <Career /> */}
 			<TechStack/>
-			      {showMatrix && <MatrixIntro />}
+			     
+				 {/* {showMatrix && <MatrixIntro />} */}
 
 		</>
 	);

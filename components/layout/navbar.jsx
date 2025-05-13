@@ -14,28 +14,31 @@ export default function Navbar() {
 
 
 
-	const [matrixText, setMatrixText] = useState(false)
+	const [matrixText, setMatrixText] = useState(false);
 
 	useEffect(() => {
-		const alreadySeen = sessionStorage.getItem('mt');
+	  let showTimeout;
+	  let hideTimeout;
 	
-		if (alreadySeen !== 'true') {
-			const delay = Math.floor(Math.random() * 7000) + 10000; // 10-17 sec
-			const showTimeout = setTimeout(() => {
-				setMatrixText(true);
+	  const scheduleMatrixText = () => {
+		const delay = Math.floor(Math.random() * 10000) + 10000; // 10–20s
 	
-				const hideTimeout = setTimeout(() => {
-					setMatrixText(false);
-					sessionStorage.setItem('mt', 'true');
-				}, 7000);
+		showTimeout = setTimeout(() => {
+		  setMatrixText(true);
 	
-				// 👇️ Belangrijk: bewaar beide timeouts om ze later op te ruimen
-				return () => clearTimeout(hideTimeout);
-			}, delay);
+		  hideTimeout = setTimeout(() => {
+			setMatrixText(false);
+			scheduleMatrixText(); // Herhaal opnieuw na verbergen
+		  }, 7000);
+		}, delay);
+	  };
 	
-			// 👇️ Dit wordt *onmiddellijk* geretourneerd door useEffect
-			return () => clearTimeout(showTimeout);
-		}
+	  scheduleMatrixText(); // Start voor de eerste keer
+	
+	  return () => {
+		clearTimeout(showTimeout);
+		clearTimeout(hideTimeout);
+	  };
 	}, []);
 
 	const router = useRouter()
@@ -170,7 +173,7 @@ export default function Navbar() {
 ) : (
   <p className="justify-center items-center flex text-green-400 font-mono">
     <Typewriter
-      words={['The Matrix has you...']}
+      words={['Wake up, Neo...']}
       loop={1}
       cursor
       cursorStyle="|"
