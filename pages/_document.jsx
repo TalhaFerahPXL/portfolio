@@ -11,13 +11,14 @@ export default function Document() {
 		<Html lang="en">
 <Head>
   {/* Page Metadata */}
-  <title>Talha – Full Stack Developer Portfolio</title>
+
   <meta name="description" content="Portfolio of Talha Ferah, a full-stack web developer specializing in React, Node.js, Remix, and Shopify. Explore projects, skills, and experience." />
   <meta name="keywords" content="Talha Ferah, developer, portfolio, full stack, web developer, React, Node.js, Next.js, .net, Remix.js Shopify, Remix, TypeScript" />
   <meta name="author" content="Talha Ferah" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#ffffff" />
   <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="google-site-verification" content="_BI61R6J1JwSXfhc4mBA9V3Y2uwGaCITQwSfcIspyHc" />
 
   {/* Favicons */}
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />

@@ -21,19 +21,19 @@ export default function Navbar() {
 	  let hideTimeout;
 	
 	  const scheduleMatrixText = () => {
-		const delay = Math.floor(Math.random() * 10000) + 10000; // 10–20s
+		const delay = Math.floor(Math.random() * 5000) + 15000;
 	
 		showTimeout = setTimeout(() => {
 		  setMatrixText(true);
 	
 		  hideTimeout = setTimeout(() => {
 			setMatrixText(false);
-			scheduleMatrixText(); // Herhaal opnieuw na verbergen
-		  }, 7000);
+			scheduleMatrixText(); 
+		  }, 5000);
 		}, delay);
 	  };
 	
-	  scheduleMatrixText(); // Start voor de eerste keer
+	  scheduleMatrixText(); 
 	
 	  return () => {
 		clearTimeout(showTimeout);
@@ -171,15 +171,15 @@ export default function Navbar() {
     {settings.name}
   </Link>
 ) : (
-  <p className="justify-center items-center flex text-green-400 font-mono">
+  <p className="justify-center items-center flex text-green-400 font-mono ml-10">
     <Typewriter
       words={['Wake up, Neo...']}
-      loop={1}
+      loop={true}
       cursor
       cursorStyle="|"
       typeSpeed={40}
       deleteSpeed={20}
-      delaySpeed={1200}
+      delaySpeed={4000}
     />
   </p>
 )}

@@ -18,7 +18,7 @@ export default function FeaturedProject({ content }, index) {
 
 	const controls = useAnimation();
 	const { ref, inView  } = useInView({
-		"threshold": 0.45,
+		"threshold": 0.25,
 		"triggerOnce": false
 	})
 
