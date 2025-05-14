@@ -18,7 +18,7 @@ export default function FeaturedProject({ content }, index) {
 
 	const controls = useAnimation();
 	const { ref, inView  } = useInView({
-		"threshold": 0.25,
+		"threshold": 0.45,
 		"triggerOnce": false
 	})
 
@@ -162,7 +162,7 @@ const item = {
 		transition: {
 			type: "tween",
 			ease: "easeIn",
-			duration: .35, 
+			duration: 0.7, 
 		}
 	},
 	visible: {
@@ -171,7 +171,7 @@ const item = {
 		transition: {
 			type: "tween",
 			ease: "easeOut",
-			duration: .5, 
+			duration: 0.9, 
 		}
 	},
 }

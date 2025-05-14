@@ -11,7 +11,9 @@ import colors 		from '../content/index/_colors.json'
 
 import { TechStack } from '../components/blocks/techstack'
 
-import MatrixIntro from '../components/sections/matrix.tsx'
+import Head from 'next/head';
+
+
 
 import { useEffect, useState } from "react";
 
@@ -54,7 +56,15 @@ export default function HomePage() {
 
 
 	return (
+		
 		<>
+		 <Head>
+        <title>Talha Ferah– Full Stack Developer Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Full-stack developer specialized in React, Node.js, Remix and Shopify. Explore projects and skills." />
+        
+      </Head>
+
 			<Color colors={colors} />
 			<Hero />
 			{/* <Looking /> */}
